@@ -12,7 +12,7 @@ from chemcrow.utils import (
 
 
 class Query2CAS(BaseTool):
-    name = "Mol2CAS"
+    name: str = "Mol2CAS"
     description = "Input molecule (name or SMILES), returns CAS number."
     url_cid: str = None
     url_data: str = None
@@ -58,7 +58,7 @@ class Query2CAS(BaseTool):
 
 
 class Query2SMILES(BaseTool):
-    name = "Name2SMILES"
+    name: str = "Name2SMILES"
     description = "Input a molecule name, returns SMILES."
     url: str = None
     chemspace_api_key: str = None
@@ -99,7 +99,7 @@ class Query2SMILES(BaseTool):
 
 
 class SMILES2Name(BaseTool):
-    name = "SMILES2Name"
+    name: str = "SMILES2Name"
     description = "Input SMILES, returns molecule name."
     ControlChemCheck = ControlChemCheck()
     query2smiles = Query2SMILES()
