@@ -83,7 +83,7 @@ class RXNPredict(RXN4Chem):
     """Predict reaction."""
 
     name: str = "ReactionPredict"
-    description = (
+    description: str = (
         "Predict the outcome of a chemical reaction. "
         "Takes as input the SMILES of the reactants separated by a dot '.', "
         "returns SMILES of the products."
@@ -127,7 +127,7 @@ class RXNRetrosynthesis(RXN4Chem):
     """Predict retrosynthesis."""
 
     name: str = "ReactionRetrosynthesis"
-    description = (
+    description: str = (
         "Obtain the synthetic route to a chemical compound. "
         "Takes as input the SMILES of the product, returns recipe."
     )
