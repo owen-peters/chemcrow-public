@@ -74,7 +74,7 @@ def scholar2result_llm(llm, query, k=5, max_sources=2, openai_api_key=None, sema
 
 class Scholar2ResultLLM(BaseTool):
     name: str = "LiteratureSearch"
-    description = (
+    description: str =  (
         "Useful to answer questions that require technical "
         "knowledge. Ask a specific question."
     )
@@ -114,7 +114,7 @@ def web_search(keywords, search_engine="google"):
 
 class WebSearch(BaseTool):
     name: str = "WebSearch"
-    description = (
+    description: str =  (
         "Input a specific question, returns an answer from web search. "
         "Do not mention any specific molecule names, but use more general features to formulate your questions."
     )
@@ -137,7 +137,7 @@ class WebSearch(BaseTool):
 
 class PatentCheck(BaseTool):
     name: str = "PatentCheck"
-    description = "Input SMILES, returns if molecule is patented. You may also input several SMILES, separated by a period."
+    description: str =  "Input SMILES, returns if molecule is patented. You may also input several SMILES, separated by a period."
 
     def _run(self, smiles: str) -> str:
         """Checks if compound is patented. Give this tool only one SMILES string"""
