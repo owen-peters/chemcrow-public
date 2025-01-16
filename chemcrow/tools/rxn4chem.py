@@ -82,7 +82,7 @@ class RXN4Chem(BaseTool):
 class RXNPredict(RXN4Chem):
     """Predict reaction."""
 
-    name = "ReactionPredict"
+    name: str = "ReactionPredict"
     description = (
         "Predict the outcome of a chemical reaction. "
         "Takes as input the SMILES of the reactants separated by a dot '.', "
@@ -126,7 +126,7 @@ class RXNPredict(RXN4Chem):
 class RXNRetrosynthesis(RXN4Chem):
     """Predict retrosynthesis."""
 
-    name = "ReactionRetrosynthesis"
+    name: str = "ReactionRetrosynthesis"
     description = (
         "Obtain the synthetic route to a chemical compound. "
         "Takes as input the SMILES of the product, returns recipe."
