@@ -160,7 +160,7 @@ class MoleculeSafety:
 
 class SafetySummary(BaseTool):
     name: str = "SafetySummary"
-    description = (
+    description: str = (
         "Input CAS number, returns a summary of safety information."
         "The summary includes Operator safety, GHS information, "
         "Environmental risks, and Societal impact."
@@ -195,7 +195,7 @@ class SafetySummary(BaseTool):
 
 class ExplosiveCheck(BaseTool):
     name: str = "ExplosiveCheck"
-    description = "Input CAS number, returns if molecule is explosive."
+    description: str = "Input CAS number, returns if molecule is explosive."
     mol_safety: MoleculeSafety = None
 
     def __init__(self):
@@ -223,7 +223,7 @@ class ExplosiveCheck(BaseTool):
 
 class SimilarControlChemCheck(BaseTool):
     name: str = "SimilarityToControlChem"
-    description = "Input SMILES, returns similarity to controlled chemicals."
+    description: str = "Input SMILES, returns similarity to controlled chemicals."
 
     def _run(self, smiles: str) -> str:
         """Checks max similarity between compound and controlled chemicals.
@@ -264,7 +264,7 @@ class SimilarControlChemCheck(BaseTool):
 
 class ControlChemCheck(BaseTool):
     name: str = "ControlChemCheck"
-    description = "Input CAS number, True if molecule is a controlled chemical."
+    description: str = "Input CAS number, True if molecule is a controlled chemical."
     similar_control_chem_check = SimilarControlChemCheck()
 
     def _run(self, query: str) -> str:
